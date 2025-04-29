@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  max-width: 1024px;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  margin: 20px auto;
+  justify-content: center;
+}
+.item {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 300px;
+  padding-right: 10px;
+}
+.delete {
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+}

@@ -20,34 +20,17 @@ const initialValues = {
   number: "",
 };
 
-// const ContactForm = () => {
-//   const dispatch = useDispatch();
-
-//   const handleSubmit = (values, actions) => {
-//     dispatch(addContact(values));
-//     actions.resetForm();
-//   };
-
 const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
     const contactToAdd = {
       name: values.name,
-      phone: values.number, // <- zamiana 'number' na 'phone'
+      number: values.number,
     };
     dispatch(addContact(contactToAdd));
     actions.resetForm();
   };
-
-  // const handleSubmit = (values, actions) => {
-  //   const contactToAdd = {
-  //     name: values.name,
-  //     phone: values.number, // <- klucz "phone" zamiast "number"
-  //   };
-  //   dispatch(addContact(contactToAdd));
-  //   actions.resetForm();
-  // };
 
   return (
     <Formik

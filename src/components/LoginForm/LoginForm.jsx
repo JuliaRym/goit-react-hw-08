@@ -1,47 +1,3 @@
-// import { Formik, Form, Field, ErrorMessage } from "formik";
-// import * as Yup from "yup";
-// import { useDispatch } from "react-redux";
-// import { logIn } from "../../redux/authOperations";
-// // import css from "./LoginForm.module.css";
-
-// const LoginSchema = Yup.object().shape({
-//   email: Yup.string().email("Nieprawidłowy email").required("Wymagane"),
-//   password: Yup.string().min(6, "Min. 6 znaków").required("Wymagane"),
-// });
-
-// export default function LoginForm() {
-//   const dispatch = useDispatch();
-
-//   const handleSubmit = (values, { resetForm }) => {
-//     dispatch(logIn(values));
-//     resetForm();
-//   };
-
-//   return (
-//     <Formik
-//       initialValues={{ email: "", password: "" }}
-//       validationSchema={LoginSchema}
-//       onSubmit={handleSubmit}
-//     >
-//       <Form className={css.form}>
-//         <label>
-//           Email:
-//           <Field type="email" name="email" />
-//           <ErrorMessage name="email" component="div" className={css.error} />
-//         </label>
-
-//         <label>
-//           Password:
-//           <Field type="password" name="password" />
-//           <ErrorMessage name="password" component="div" className={css.error} />
-//         </label>
-
-//         <button type="submit">Zaloguj się</button>
-//       </Form>
-//     </Formik>
-//   );
-// }
-
 import { useDispatch } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -92,7 +48,9 @@ export const LoginForm = () => {
           <ErrorMessage name="password" component="div" className={css.error} />
         </label>
 
-        <button type="submit">Log In</button>
+        <button className={css.button} type="submit">
+          Log In
+        </button>
       </Form>
     </Formik>
   );

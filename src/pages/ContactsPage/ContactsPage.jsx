@@ -1,11 +1,6 @@
-// import ContactForm from "../components/ContactForm";
-// import SearchBox from "../components/SearchBox";
-// import ContactList from "../components/ContactList";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import ContactList from "../../components/ContactList/ContactList";
-
-// import css from "./ContactPage.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchContacts } from "../../redux/contactsOperations";
@@ -24,7 +19,6 @@ const ContactsPage = () => {
       <ContactForm />
       <SearchBox />
       {loading && <p>Loading...</p>}
-      {/* {error && <p>Unexpected error occurred: {error}</p>} */}
       <ContactList />
     </div>
   );
